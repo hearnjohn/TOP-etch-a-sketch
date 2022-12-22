@@ -15,13 +15,22 @@ function createGrid() {
 }
 
 function clearCells() {
-  let squares = document.querySelectorAll("gridsquare-colored");
+  let squares = document.querySelectorAll("div.gridsquare-colored");
   squares.forEach((square) => {
     square.classList.add("gridsquare-uncolored");
-    square.classList.remove("gridsquare-uncolored");
+    square.classList.remove("gridsquare-colored");
   });
 }
 
-function addGridEventListeners() {}
+function addGridEventListeners() {
+  let squares = document.querySelectorAll("div.gridsquare-uncolored");
+  squares.forEach((square) => {
+    square.addEventListener("mouseover", () => {
+      square.classList.add("gridsquare-colored");
+      square.classList.remove("gridsquare-uncolored");
+    });
+  });
+}
 
 createGrid();
+addGridEventListeners();
