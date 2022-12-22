@@ -3,11 +3,19 @@
   gap: 0;
 }
 
-.gridsquare {
+.gridsquare-uncolored {
   padding: 0 0;
   height: 32px;
   width: 32px;
   background-color: beige;
+  border: 1px solid black;
+}
+
+.gridsquare-colored {
+  padding: 0 0;
+  height: 32px;
+  width: 32px;
+  background-color: black;
   border: 1px solid black;
 }
 
@@ -17,6 +25,7 @@
   height: fit-content;
   width: fit-content;
   align-self: center;
+  border-radius: 6px;
 }
 
 body {
